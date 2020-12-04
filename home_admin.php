@@ -11,20 +11,11 @@
         }?>  
 </head>
 <body>
-    <?php include 'header.php'?>
+    <?php include 'header_admin.php'?>
     
 
     
 <!-- Welcome -->
-<div class="container-fluid padding">
-    <div class="row welcome text-center">
-        <div class="col-12">
-            <a class="lead">
-                Selamat datang, <?php echo $_SESSION['username']; ?> <br>
-                Anda berhasil Login <br><a href='controllers/logout.php'>logout</a>
-            </a>
-        </div>
-    </div>
 </div>
 <!--- Image Slider -->
 <div id="slides" class="carousel slide" data-ride="carousel">

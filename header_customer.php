@@ -82,7 +82,10 @@
                     <a class="nav-link" href="#">Confirm Payment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
+                    <a class="nav-link" href="#"><?php echo $_SESSION['username']; ?></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="controllers/logout.php">Logout</a>
                 </li>
             </ul> 
         </div>

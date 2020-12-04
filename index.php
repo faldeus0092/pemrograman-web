@@ -25,22 +25,25 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Barang Baru</a>
+                    <a class="nav-link" href="#">Shop</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pre-Order</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Model Kit</a>
+                    <a class="nav-link" href="#">Sale</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Figure</a>
+                    <a class="nav-link" href="#">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cat</a>
+                    <a class="nav-link" href="#">Check Order</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tools</a>
+                    <a class="nav-link" href="#">Confirm Payment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
             </ul> 
         </div>
@@ -104,7 +107,8 @@
 	<div class="row welcome text-center">
 		<div class="col-12">
 			<h1 class="display-4">GUNPLA</h1>
-		</div>
+        </div>
+        <hr>
 		<div class="col-12">
 			<a class="lead">
 				Challenge the dream. GUNDAM will move. The world will move.
@@ -114,10 +118,42 @@
 </div>
 
 <!--- Three Column Section -->
-
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <i class="fas fa-code"></i>
+            <h3>HTML5</h3>
+            <p>Built with the latest version of HTML5</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <i class="fas fa-code"></i>
+            <h3>BOOTSTRAP</h3>
+            <p>Built with the latest version of Bootstrap, BS4</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+            <i class="fab fa-code"></i>
+            <h3>BOOTSTRAP</h3>
+            <p>Built with the latest version of Bootstrap, BS4</p>
+        </div>
+    </div>
+    <hr class="my-4">
+</div>
 
 <!--- Two Column Section -->
-
+<div class="container-fluid padding">
+    <div class="row padding">
+        <div class="col-lg-6">
+            <h2>Build Your Dream GUNPLA</h2>
+            <p>MegaHobby.com also stocks a wide variety of paints, supplies, detailing sets, and books to satisfy every customer's needs.</p>
+            <p> There are also many educational and historical items that are perfect for science and school projects. We have also expanded our product line to include puzzles, paint by number sets, science kits, and more</p>
+            <br>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+        <div class="col-lg-6">
+            <img src="img/desk.png" class="img-fluid">
+        </div>
+    </div>
+</div>
 
 <!--- Fixed background -->
 
@@ -126,19 +162,107 @@
 
   
 <!--- Meet the team -->
-
+<div class="container-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class="display-4">Browse Items</h1>
+        </div>
+    </div>
+</div>
 
 <!--- Cards -->
-
+<div class="container-fluid padding">
+    <div class="row padding">
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="img/team1.png">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        MG 1/100 Gundam Barbatos
+                    </h4>
+                    <p class="card-text">Bottom Text</p>
+                    <a href="#" class="btn btn-outline-secondary">Rp 700.000</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="img/team2.png">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        MG 1/100 Gundam Dynames
+                    </h4>
+                    <p class="card-text">Bottom Text</p>
+                    <a href="#" class="btn btn-outline-secondary">Rp 700.000</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="img/team3.png">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        MG 1/100 Gundam Astray Red Frame Kai
+                    </h4>
+                    <p class="card-text">Bottom Text</p>
+                    <a href="#" class="btn btn-outline-secondary">Rp 700.000</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--- Two Column Section -->
 
 
 <!--- Connect -->
-
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h2>Connect</h2>
+        </div>
+        <div class="col-12 social padding">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
 
 <!--- Footer -->
-
+<footer>
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="img/w3newbie.png">
+                <hr class="light">
+                <p>555-555-555</p>
+                <p>sg.epk-x29@ppgn.jp</p>
+                <p>Akihabara 209</p>
+                <p>Akihabara, Tokyo</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h2>Our Hours</h2>
+                <p>Monday: 9am-10pm</p>
+                <p>Monday: 9am-10pm</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h2>Our Stores</h2>
+                <p>Alamat</p>
+                <p>Alamat</p>
+                <p>Alamat</p>
+            </div>
+            <div class="col-12">
+                <hr class="light-100">
+                <b5>&copy; w3newbie.com</b5>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 

@@ -79,10 +79,10 @@
                     <a class="nav-link" href="#">Check Order</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Confirm Payment</a>
+                    <a class="nav-link" href="addProducts.php">Add Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
+                    <a class="nav-link" href="controllers/logout.php">admin: <?php echo $_SESSION['username'];?></a>
                 </li>
             </ul> 
         </div>
