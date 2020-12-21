@@ -17,8 +17,9 @@
         while($row=$result->fetch_assoc()){
             if (password_verify ($password , $row['password'] )){
                 $_SESSION['username']=$username;
+                $_SESSION['id_user']=$row['id_user'];
                 if ($row['role']=='1'){
-                    header("Location:../home_customer.php");
+                    header("Location:../index.php");
                 }
                 else  header("Location:../home_admin.php");
             }

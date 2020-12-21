@@ -10,31 +10,24 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
+    <script src="main.js"></script>
+    <link href="style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
 </head>
 <body>
+<?php  session_start(); ?>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+        <a class="navbar-brand" href="index.php"><img src="img/logo.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pre-Order</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sale</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">News</a>
+                    <a class="nav-link" href="cart.php">Cart</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Check Order</a>
@@ -42,29 +35,24 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Confirm Payment</a>
                 </li>
-                <li class="nav-item">
+                <?php if(isset($_SESSION['username'])){
+                    
+                echo '<li class="nav-item">
+                <a class="nav-link" href="controllers/logout.php">'; echo $_SESSION["username"]; echo '</a>
+            </li>';
+                } else{
+                    echo '<li class="nav-item">
                     <a class="nav-link" href="login.php">Login</a>
-                </li>
+                </li>';
+                } 
+                ?> 
             </ul> 
         </div>
     </div>
 </nav>
 
-<!-- Welcome -->
-<div class="container-fluid">
-    <div class="row jumbotron">
-        <p>
-			Welcome. please either 
-				<a href="login.php">login</a>
-				 or 
-				 <a href="register.php">register</a> 
-				 to continue
-		</p>
-    </div>
-</div>
-
 <!--- Image Slider -->
-<div id="slides" class="carousel slide" data-ride="carousel">
+<div id="slides" class="carousel slide col-12" data-ride="carousel">
     <ul class="carousel-indicators">
         <li data-target="#slides" data-slide-to="0" class="active"></li>
         <li data-target="#slides" data-slide-to="1"></li>
@@ -90,130 +78,53 @@
     </div>
 </div>
 
-<!--- Jumbotron -->
+<!--- Meet the team -->
+<div class="container-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h3 class="display-4">Browse Items</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Konten -->
 <div class="container-fluid">
-    <div class="row jumbotron">
-        <div class="col-xs-12 col-sm-12 col-md-9 col-xl-10">
-            <a class="lead">MegaHobby.com makes it easy for everyone to shop online and find everything they need in one convenient place. We are busy enhancing and updating the site on a daily basis to keep it fresh and interesting for every visitor that stops by. You will find a wide variety of models and many different skill levels to accommodate all builders. Visit the site often to see the many different items we offer.</a>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-3 col-xl-2">
-            <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">ccs</button></a>
-        </div>
-    </div>
-</div>
+    <div class="row">
 
-<!--- Welcome Section -->
-<div class="container-fluid padding">
-	<div class="row welcome text-center">
-		<div class="col-12">
-			<h1 class="display-4">GUNPLA</h1>
-        </div>
-        <hr>
-		<div class="col-12">
-			<a class="lead">
-				Challenge the dream. GUNDAM will move. The world will move.
-			</a>
-		</div>
-	</div>
-</div>
+        <div class="col-md-1"></div>
 
-<!--- Three Column Section -->
-<div class="container-fluid padding">
-    <div class="row text-center padding">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-            <i class="fas fa-code"></i>
-            <h3>HTML5</h3>
-            <p>Built with the latest version of HTML5</p>
+        <!-- Sidebar -->
+        <!-- <div class="col-md-2">
+            <div id="get_category"></div>
+            <div id="get_brand"></div>
+        </div> -->
+        <div class="col-md-2">
+            <!-- category -->
+            <div id="get_category"></div>   
+            <!-- category ends here -->
+            <!-- brand -->
+            <div id="get_brand"></div>
+            <!-- brand ends here   -->
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-            <i class="fas fa-code"></i>
-            <h3>BOOTSTRAP</h3>
-            <p>Built with the latest version of Bootstrap, BS4</p>
+        <!--Produk-->
+        <div class="col-md-8">
+            <div class="col-md-12" id="product_img">
+            </div>
+            <div class="container-fluid padding">
+                <div class="row" id="get_product"></div>
+            </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-4">
-            <i class="fab fa-code"></i>
-            <h3>BOOTSTRAP</h3>
-            <p>Built with the latest version of Bootstrap, BS4</p>
-        </div>
-    </div>
-    <hr class="my-4">
-</div>
+        
+        <div class="col-md-1"></div>
 
-<!--- Two Column Section -->
-<div class="container-fluid padding">
-    <div class="row padding">
-        <div class="col-lg-6">
-            <h2>Build Your Dream GUNPLA</h2>
-            <p>MegaHobby.com also stocks a wide variety of paints, supplies, detailing sets, and books to satisfy every customer's needs.</p>
-            <p> There are also many educational and historical items that are perfect for science and school projects. We have also expanded our product line to include puzzles, paint by number sets, science kits, and more</p>
-            <br>
-            <a href="#" class="btn btn-primary">Read More</a>
-        </div>
-        <div class="col-lg-6">
-            <img src="img/desk.png" class="img-fluid">
-        </div>
     </div>
 </div>
 
 <!--- Fixed background -->
 
-
 <!--- Emoji Section -->
 
-  
-<!--- Meet the team -->
-<div class="container-fluid padding">
-    <div class="row welcome text-center">
-        <div class="col-12">
-            <h1 class="display-4">Browse Items</h1>
-        </div>
-    </div>
-</div>
-
-<!--- Cards -->
-<div class="container-fluid padding">
-    <div class="row padding">
-        <div class="col-md-4">
-            <div class="card">
-                <img class="card-img-top" src="img/team1.png">
-                <div class="card-body">
-                    <h4 class="card-title">
-                        MG 1/100 Gundam Barbatos
-                    </h4>
-                    <p class="card-text">Bottom Text</p>
-                    <a href="#" class="btn btn-outline-secondary">Rp 700.000</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img class="card-img-top" src="img/team2.png">
-                <div class="card-body">
-                    <h4 class="card-title">
-                        MG 1/100 Gundam Dynames
-                    </h4>
-                    <p class="card-text">Bottom Text</p>
-                    <a href="#" class="btn btn-outline-secondary">Rp 700.000</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img class="card-img-top" src="img/team3.png">
-                <div class="card-body">
-                    <h4 class="card-title">
-                        MG 1/100 Gundam Astray Red Frame Kai
-                    </h4>
-                    <p class="card-text">Bottom Text</p>
-                    <a href="#" class="btn btn-outline-secondary">Rp 700.000</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!--- Two Column Section -->
-
 
 <!--- Connect -->
 <div class="container-fluid padding">
@@ -268,8 +179,6 @@
 
 </body>
 </html>
-
-
 
 
 <!-- View in Browser: Drew's #1 Trending YouTube Tutorial -->

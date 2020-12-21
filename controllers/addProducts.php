@@ -2,7 +2,7 @@
     include ("../connection.php");
     $nama = $_POST['nama'];
     $jenis = $_POST['jenis'];
-    $stok = $_POST['stok'];
+    $stock = $_POST['stock'];
     // ambil data file
     $picture = $_FILES['berkas']['name'];
     $tmpname = $_FILES['berkas']['tmp_name']; 

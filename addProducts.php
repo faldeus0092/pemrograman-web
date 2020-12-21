@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Register</title>
+		<title>Add Products</title>
 		<link rel="stylesheet" href="styles.css">
     </head>
     <?php include 'header.php'?>
@@ -24,7 +24,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="formControlRange">Stok</label>
-                                <input type="range" class="form-control-range" id="stok" min="1" max="500" value="1">
+                                <input type="range" class="form-control-range" id="stock" min="1" max="500" value="1">
                                 <p>Value: <span id="demo"></span></p>
                             </div>
                             <div class="form-group">

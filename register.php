@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Register</title>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="style.css">
     </head>
     <?php include 'header.php'?>
     <body>
@@ -40,5 +40,6 @@
                 </div>
             </div>
         </div>
-	</body>
+    </body>
+    <?php include 'footer.php'?>
 </html> 
