@@ -51,7 +51,7 @@ $(document).ready(function(){
              $.ajax({
              url		:	"action.php",
              method	:	"POST",
-             data	:	{get_seleted_Category:1,cat_id:cid},
+             data	:	{get_seleted_Category:1,category_id:cid},
              success	:	function(data){
                  $("#get_product").html(data);
                  

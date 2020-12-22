@@ -18,6 +18,7 @@
             if (password_verify ($password , $row['password'] )){
                 $_SESSION['username']=$username;
                 $_SESSION['id_user']=$row['id_user'];
+                $_SESSION['role']=$row['role'];
                 if ($row['role']=='1'){
                     header("Location:../index.php");
                 }

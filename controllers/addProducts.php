@@ -1,7 +1,8 @@
 <?php
     include ("../connection.php");
     $nama = $_POST['nama'];
-    $jenis = $_POST['jenis'];
+    $kategori = $_POST['kategori'];
+    $brand = $_POST['brand'];
     $stock = $_POST['stock'];
     // ambil data file
     $picture = $_FILES['berkas']['name'];
@@ -9,10 +10,13 @@
     $dir='../productpic/';
     
     if(move_uploaded_file($tmpname, $dir.$picture)){
-        $q="INSERT INTO product (name,type,stock,picture) VALUES ('$nama',
-                                                        '$jenis',
+        $q="INSERT INTO product (name,category_id,stock,picture,brand_id) VALUES ('$nama',
+                                                        '$kategori',
                                                         '$stock',
-                                                        '$picture')";
+                                                        '$picture',
+                                                        '$brand')";
+        // var_dump ($q);
+        // die;
     }
 
     if (sizeof($q) <= 0){

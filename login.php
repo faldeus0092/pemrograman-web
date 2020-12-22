@@ -7,8 +7,10 @@
 	</head>
     <body>
     <?php include 'header.php'?>
-    <div class="container-fluid padding" align="center">
-            <div class="col-md-4 col-sm-6">
+<div class="apply-process-area apply-bg pt-150 pb-150" data-background="assets/img/gallery/how-applybg.png">
+    <div class="container">    
+        <div class="container-fluid padding" align="center">
+            <div class="col-md-5 col-sm-6">
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title">
@@ -23,7 +25,7 @@
                                 <label for="password">Password:</label><br>
                                 <input type="password" class="form-control" id="password" name="password" width="100"><br>
                             </div>
-                                <input type="submit" class="btn btn-primary" value="Submit">
+                                <input type="submit" class="btn post-btn" value="Submit">
                         </form>
                         <p style="margin-top: 1rem;">
                             Tidak punya akun? <a href="register.php">daftar</a>
@@ -38,6 +40,8 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
     <?php include 'footer.php'?>
 	</body>
 </html> 

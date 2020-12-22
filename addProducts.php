@@ -15,16 +15,27 @@
                         </div>
                         <form action="controllers/addProducts.php" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label for="email">Nama Produk</label><br>
+                                <label for="nama">Nama Produk</label><br>
                                 <input type="text" class="form-control" id="nama" name="nama" width="100"><br>
                             </div>
                             <div class="form-group">
-                                <label for="email">Jenis</label><br>
-                                <input type="text" class="form-control" id="jenis" name="jenis" width="100"><br>
+                                <label for="brand">Brand</label><br>
+                                <select class="form-control" id="brand" name="brand">
+                                    <option value="1">Bandai</option>
+                                    <option value="2">Kotobukiya</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="kategori">Kategori</label><br>
+                                <select class="form-control" id="kategori" name="kategori">
+                                    <option value="1">Gundam Model</option>
+                                    <option value="2">Star Wars</option>
+                                    <option value="3">Military</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="formControlRange">Stok</label>
-                                <input type="range" class="form-control-range" id="stock" min="1" max="500" value="1">
+                                <input type="range" class="form-control-range" id="stock" name="stock" min="1" max="500" value="1">
                                 <p>Value: <span id="demo"></span></p>
                             </div>
                             <div class="form-group">
@@ -33,7 +44,6 @@
                             </div>
                             <script>
                                 var slider = document.getElementById("stok");
-                                var output = document.getElementById("demo");
                                 output.innerHTML = slider.value;
                                 
                                 slider.oninput = function() {
