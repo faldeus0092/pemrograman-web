@@ -22,7 +22,7 @@
                 if ($row['role']=='1'){
                     header("Location:../index.php");
                 }
-                else  header("Location:../home_admin.php");
+                else  header("Location:../home-admin.php");
             }
         }
     }else{

@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Add Products</title>
-		<link rel="stylesheet" href="styles.css">
-    </head>
-    <?php include 'header.php'?>
+        <title>Tambah Produk</title>
+       
+	</head>
     <body>
+    <?php session_start(); include 'header-admin.php';
+    if($_SESSION['role']!=2){
+        Location('index.php');
+    }?>
+<div class="apply-process-area apply-bg pt-150 pb-150" data-background="assets/img/gallery/how-applybg.png">
+    <div class="container">    
         <div class="container-fluid padding" align="center">
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-5 col-sm-6">
                 <div class="card">
                     <div class="card-body">
-                        <div class="card-title">
-                            <h1 style="text-align:center">Add Products</h1>
+                    <div class="card-title">
+                            <h1 style="text-align:center">Tambah Produk</h1>
                         </div>
                         <form action="controllers/addProducts.php" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
@@ -56,5 +61,8 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+    <?php include 'footer.php'?>
 	</body>
 </html> 
