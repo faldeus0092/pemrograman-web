@@ -29,22 +29,29 @@ if(isset($_GET['id']) && !isset($_POST['update'])){
 
     //mengecek produk apa saja di cart
     //awal index -1
-    $index=-1;
-    // set $cart as an array, unserialize() converts a string into array
-    $cart = unserialize(serialize($_SESSION['cart']));
-    for($i=0; $i<count($cart);$i++)
-        if ($cart[$i]->id_product == $_GET['id']){
-            $index = $i;
-            break;
-        }
+    if (!isset($_SESSION['cart'])){
+        $_SESSION['cart'][] = $item;
+    }else{
+        $index=-1;
+        // set $cart as an array, unserialize() converts a string into array
+        $cart = unserialize(serialize($_SESSION['cart']));
+        for($i=0; $i<count($cart);$i++)
+            if ($cart[$i]->id_product == $_GET['id']){
+                $index = $i;
+                break;
+            }
+    
         if($index == -1) 
-            $_SESSION['cart'][] = $item; // $_SESSION['cart']: set $cart as session variable
-        else {
-            if (($cart[$index]->quantity) < $iteminstock)
-                $cart[$index]->quantity ++;
-                $_SESSION['cart'] = $cart;
-        }
+                $_SESSION['cart'][] = $item; // $_SESSION['cart']: set $cart as session variable
+            else {
+                if (($cart[$index]->quantity) < $iteminstock)
+                    $cart[$index]->quantity ++;
+                    $_SESSION['cart'] = $cart;
+            }
+    }
+        
 }
+
 // Delete product in cart
 if(isset($_GET['index']) && !isset($_POST['update'])) {
 	$cart = unserialize(serialize($_SESSION['cart']));

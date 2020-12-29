@@ -26,16 +26,16 @@
 			<div class="col-lg-8 posts-list">
 				<div class="single-post">
 				<h4>Detail Pemesanan</h4>
-				<form class="form-contact comment_form" action="controllers/order.php" id="commentForm">
+				<form class="form-contact comment_form" action="order.php" id="commentForm" method="POST">
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
-								<input class="form-control" name="name" id="name" type="text" placeholder="Name">
+								<input class="form-control" name="nama" id="nama" type="text" placeholder="Name">
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group">
-								<input class="form-control" name="telp" id="telp" type="text" placeholder="No. HP / Telepon">
+								<input class="form-control" name="no_hp" id="no_hp" type="text" placeholder="No. HP / Telepon">
 							</div>
 						</div>
 						<div class="col-12">

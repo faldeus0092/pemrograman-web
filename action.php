@@ -86,7 +86,7 @@
                 $cid = $row["category_id"];
                 $cat_name = $row["category_name"];
                 echo "
-                <a href='#' class='selectbrand dropdown-item' bid='$cid'>$cat_name</a>
+                <a href='#' class='category dropdown-item' cid='$cid'>$cat_name</a>
                 ";
             }
             echo "</div>";
