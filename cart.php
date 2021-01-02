@@ -116,6 +116,7 @@ if(isset($_POST['update'])) {
                                             }
                                 ?>
                                 <?php if(isset($_SESSION['cart'])){ ?>
+                                    <a style="font-weight: bold; color: red;">RP<?php echo $total ?></a>
                                  <?php 
                                 }else { ?>
                                     <a style="font-weight: bold; color: red;">Keranjang belanja anda masih kosong</a>
@@ -174,7 +175,7 @@ if(isset($_POST['update'])) {
                                                 //tampilkan produk dengan loop
                                                 for($i=0; $i<count($cart); $i++){
                                                 $s += $cart[$i]->price * $cart[$i]->quantity;
-                                            }
+                                            
                                 ?>
                                 <div class="single-job-items mb-30">
                                     <div class="job-items">
@@ -211,7 +212,7 @@ if(isset($_POST['update'])) {
                                         
                                     </div>
                                 </div>
-                                <?php $index++;} ?>
+                                <?php $index++;}} ?>
                                     <!-- till here -->
                                 </div>
                                 <!-- ajax done -->
