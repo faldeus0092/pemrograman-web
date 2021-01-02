@@ -153,12 +153,12 @@
                         <!-- single three -->
                         <div class="single-listing">
                             <!-- select-brands start -->
-                            <div class="select-Categories pb-50">
+                            <!-- <div class="select-Categories pb-50">
                                 <div class="small-section-tittle2">
                                     <h4>Brand</h4>
                                 </div>
                                 <div id="get_brand"></div>
-                            </div>
+                            </div> -->
                             <!-- select-brands End -->
                             <!-- select-Categories start -->
                             <div class="select-Categories pb-50">

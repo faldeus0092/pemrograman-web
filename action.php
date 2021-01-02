@@ -19,7 +19,7 @@
                 $pro_id    = $row['id_product'];
                 $pro_name  = $row['name'];
                 $pro_cat  = $row['category_id'];
-                $pro_brand  = $row['brand_id'];
+                // $pro_brand  = $row['brand_id'];
                 $pro_image = $row['picture'];
                 $pro_price = $row['price'];
                 $price = number_format($pro_price, 0);
@@ -115,7 +115,7 @@
             $pro_id    = $row['id_product'];
                 $pro_name  = $row['name'];
                 $pro_cat  = $row['category_id'];
-                $pro_brand  = $row['brand_id'];
+               // $pro_brand  = $row['brand_id'];
                 $pro_image = $row['picture'];
                 $pro_price = $row['price'];
                 $price = number_format($pro_price, 0);

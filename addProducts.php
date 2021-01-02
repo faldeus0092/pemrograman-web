@@ -21,14 +21,11 @@
                         <form action="controllers/addProducts.php" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="nama">Nama Produk</label><br>
-                                <input type="text" class="form-control" id="nama" name="nama" width="100"><br>
+                                <input type="text" class="form-control" id="nama" name="nama" width="80"><br>
                             </div>
                             <div class="form-group">
-                                <label for="brand">Brand</label><br>
-                                <select class="form-control" id="brand" name="brand">
-                                    <option value="1">Bandai</option>
-                                    <option value="2">Kotobukiya</option>
-                                </select>
+                                <label for="nama">Harga</label><br>
+                                <input type="text" class="form-control" id="price" name="price" width="80"><br>
                             </div>
                             <div class="form-group">
                                 <label for="kategori">Kategori</label><br>
@@ -36,25 +33,32 @@
                                     <option value="1">Gundam Model</option>
                                     <option value="2">Star Wars</option>
                                     <option value="3">Military</option>
+                                    <option value="4">Tools</option>
+                                    <option value="5">Paint</option>
                                 </select>
                             </div>
+                            <!-- <div class="slidecontainer">
+                                <input type="range" min="1" max="50" value="25" class="slider" id="stock" name="stock">
+                                <p>Value: <span id="demo"></span></p>
+                            </div> -->
                             <div class="form-group">
                                 <label for="formControlRange">Stok</label>
-                                <input type="range" class="form-control-range" id="stock" name="stock" min="1" max="500" value="1">
-                                <p>Value: <span id="demo"></span></p>
+                                <input type="range" class="form-control-range" id="stock" name="stock" min="1" max="50" value="1">
+                                <p>Jumlah: <span id="demo"></span></p>
                             </div>
                             <div class="form-group">
-                                <label for="berkas">Foto :</label><br>
+                                <label for="berkas">Gambar</label><br>
                                 <input type="file" class="form-control" id="berkas" name="berkas" width="100" style="margin-bottom: 1rem;"><br>
                             </div>
                             <script>
-                                var slider = document.getElementById("stok");
+                                var slider = document.getElementById("stock");
+                                var output = document.getElementById("demo");
                                 output.innerHTML = slider.value;
                                 
                                 slider.oninput = function() {
                                   output.innerHTML = this.value;
                                 }
-                                </script>
+                            </script>
                             <input type="submit" value="Add Product" class="btn btn-primary">
                         </form>
                     </div>
