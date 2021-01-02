@@ -70,6 +70,10 @@ if(isset($_POST['update'])) {
   }
 
 ?>
+<head>
+        <title>Keranjang</title>
+       
+	</head>
     <!-- Konten -->
 <div class="job-listing-area pt-120 pb-120">
     <form method="POST">
@@ -101,15 +105,21 @@ if(isset($_POST['update'])) {
                                     <h4>Total Harga</h4>
                                 </div>
                                 <?php 
+                                            if (isset($_SESSION['cart'])){
                                                 $cart = unserialize(serialize($_SESSION['cart']));
                                                 $s = 0;
                                                 $index = 0;
                                                 //tampilkan produk dengan loop
                                                 for($i=0; $i<count($cart); $i++){
                                                 $s += $cart[$i]->price * $cart[$i]->quantity;}
-                                                $total = number_format($s, 0)
+                                                $total = number_format($s, 0);
+                                            }
                                 ?>
-                                <a style="font-weight: bold; color: red;">Rp<?php echo $total; ?>,00 </a>
+                                <?php if(isset($_SESSION['cart'])){ ?>
+                                 <?php 
+                                }else { ?>
+                                    <a style="font-weight: bold; color: red;">Keranjang belanja anda masih kosong</a>
+                                <?php } ?>
                             </div>
                             <!-- select-brands End -->
                             <!-- select-Categories start -->
@@ -157,12 +167,14 @@ if(isset($_POST['update'])) {
                                 <!-- ajax -->
                                 <!-- loop cart -->
                                 <?php 
+                                            if (isset($_SESSION['cart'])){
                                                 $cart = unserialize(serialize($_SESSION['cart']));
                                                 $s = 0;
                                                 $index = 0;
                                                 //tampilkan produk dengan loop
                                                 for($i=0; $i<count($cart); $i++){
                                                 $s += $cart[$i]->price * $cart[$i]->quantity;
+                                            }
                                 ?>
                                 <div class="single-job-items mb-30">
                                     <div class="job-items">

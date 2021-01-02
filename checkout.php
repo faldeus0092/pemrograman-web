@@ -19,6 +19,10 @@
 // // Clear all product in cart
 // unset($_SESSION['cart']);
  ?>
+ <head>
+        <title>Checkout Pesanan</title>
+       
+	</head>
  <section class="blog_area single-post-area section-padding">
       <div class="container">
          <div class="row">
