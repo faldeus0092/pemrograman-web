@@ -7,31 +7,31 @@
     $user=$_SESSION['id_user'];
     $q1="SELECT * FROM `orders` WHERE `id_user`=$user";
     $res1 = mysqli_query($koneksi,$q1);
-    
+    $id_user=$_SESSION['id_user'];
     $q2="SELECT *, t2.name FROM `order-details` t1 
     LEFT JOIN product t2 ON t1.id_product=t2.id_product 
-    JOIN orders t3 ON (t1.id_order=t3.id_order && t3.id_user=4)";
+    JOIN orders t3 ON (t1.id_order=t3.id_order && t3.id_user=$id_user)";
     $res2 = mysqli_query($koneksi,$q2);
 
-    if(isset($_GET['id']) && isset($_GET['status'])){
-        $status=$_GET['status'];
-        $id=$_GET['id'];
-        //menunggu persetujuan -> diproses
-        if ($status==0){
-            $q = "UPDATE orders SET `status` = 1  WHERE `id_order` = $id";
-            mysqli_query($koneksi, $q);
-        }
-        //diproses -> dikirim
-        if ($status==1){
-            $q = "UPDATE orders SET `status` = 2  WHERE `id_order` = $id";
-            mysqli_query($koneksi, $q);
-        }
-        //dikirim -> sampai tujuan
-        if ($status==2){
-            $q = "UPDATE orders SET `status` = 3  WHERE `id_order` = $id";
-            mysqli_query($koneksi, $q);
-        }
-    }
+    // if(isset($_GET['id']) && isset($_GET['status'])){
+    //     $status=$_GET['status'];
+    //     $id=$_GET['id'];
+    //     //menunggu persetujuan -> diproses
+    //     if ($status==0){
+    //         $q = "UPDATE orders SET `status` = 1  WHERE `id_order` = $id";
+    //         mysqli_query($koneksi, $q);
+    //     }
+    //     //diproses -> dikirim
+    //     if ($status==1){
+    //         $q = "UPDATE orders SET `status` = 2  WHERE `id_order` = $id";
+    //         mysqli_query($koneksi, $q);
+    //     }
+    //     //dikirim -> sampai tujuan
+    //     if ($status==2){
+    //         $q = "UPDATE orders SET `status` = 3  WHERE `id_order` = $id";
+    //         mysqli_query($koneksi, $q);
+    //     }
+    // }
 
     include ('header.php');
 ?>
@@ -62,7 +62,7 @@
 <h3 class="mb-30">Kelola Pesanan</h3>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Pesanan Anda</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
