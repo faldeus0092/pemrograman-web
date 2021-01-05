@@ -105,7 +105,7 @@
             $sql = "SELECT * from product WHERE brand_id = '$id'";
         } else {
             $keyword = $_POST["keyword"];
-            $sql = "SELECT * FROM product WHERE product_keywords LIKE '%$keyword%'";
+            $sql = "SELECT * FROM product WHERE `name` LIKE '%$keyword%'";
         }
     
        

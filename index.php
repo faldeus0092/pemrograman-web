@@ -208,14 +208,13 @@
                                         <div class="count-job mb-35">
                                             <!-- Select job items start -->
                                             <div class="select-job-items">
-                                                <span>Sort by</span>
-                                                <select name="select">
-                                                    <option value="">None</option>
-                                                    <option value="">job list</option>
-                                                    <option value="">job list</option>
-                                                    <option value="">job list</option>
-                                                </select>
+                                                <input type="text" placeholder="Nama Produk" class="form-control" id="search">
+                                                <button class="genric-btn primary radius" id="search_btn">Search</button>
                                             </div>
+                                            <div class="select-job-items">
+                                               
+                                            </div>
+                                            
                                             <!--  Select job items End-->
                                         </div>
                                     </div>
