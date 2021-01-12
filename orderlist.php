@@ -7,10 +7,11 @@
     $user=$_SESSION['id_user'];
     $q1="SELECT * FROM `orders` WHERE `id_user`=$user";
     $res1 = mysqli_query($koneksi,$q1);
+
     $id_user=$_SESSION['id_user'];
     $q2="SELECT *, t2.name FROM `order-details` t1 
-    LEFT JOIN product t2 ON t1.id_product=t2.id_product 
-    JOIN orders t3 ON (t1.id_order=t3.id_order && t3.id_user=$id_user)";
+        LEFT JOIN product t2 ON t1.id_product=t2.id_product 
+        JOIN orders t3 ON (t1.id_order=t3.id_order && t3.id_user=$id_user)";
     $res2 = mysqli_query($koneksi,$q2);
 
     // if(isset($_GET['id']) && isset($_GET['status'])){

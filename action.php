@@ -23,20 +23,7 @@
                 $pro_image = $row['picture'];
                 $pro_price = $row['price'];
                 $price = number_format($pro_price, 0);
-                // echo "
-                //         <div class='col-md-3 col-sm-6 col-xs-6 col-6'>
-                //             <div class='card'>
-                //                 <img class='card-img-top' src='productpic/$pro_image'>
-                //                 <div class='card-body'>
-                //                     <h6 class='card-title'>
-                //                         $pro_name
-                //                     </h6>
-                //                     <a href='#' class='btn btn-outline-secondary'>$pro_price</a>
-                //                     <a href='cart.php?id=$pro_id&action=add' class='btn btn-primary'>Add to Cart</a>
-                //                 </div>
-                //             </div>
-                //         </div>
-                // ";
+                
                 echo "<div class='single-job-items mb-30'>
                 <div class='job-items'>
                     <div class='company-img'>
@@ -59,23 +46,23 @@
         }
     }
 
-    // brand
-    if(isset($_POST["brand"])){
-        $brand_query = "SELECT * FROM brand";
-        $run_query = mysqli_query($koneksi,$brand_query) or die(mysqli_error($koneksi));
-        if(mysqli_num_rows($run_query) > 0){
-            while($row = mysqli_fetch_array($run_query)){
-                $bid = $row["brand_id"];
-                $brand_name = $row["brand_name"];
-                echo "
+    // // brand
+    // if(isset($_POST["brand"])){
+    //     $brand_query = "SELECT * FROM brand";
+    //     $run_query = mysqli_query($koneksi,$brand_query) or die(mysqli_error($koneksi));
+    //     if(mysqli_num_rows($run_query) > 0){
+    //         while($row = mysqli_fetch_array($run_query)){
+    //             $bid = $row["brand_id"];
+    //             $brand_name = $row["brand_name"];
+    //             echo "
                         
-                            <a href='#' class='selectbrand dropdown-item' bid='$bid'>$brand_name</a>
+    //                         <a href='#' class='selectbrand dropdown-item' bid='$bid'>$brand_name</a>
                         
-                ";
-            }
-            echo "</div>";
-        }
-    }
+    //             ";
+    //         }
+    //         echo "</div>";
+    //     }
+    // }
 
     //category
     if(isset($_POST["category"])){
@@ -94,16 +81,18 @@
     }
 
     //filter by brand/category/search
-    if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectbrand"])  || isset($_POST["search"])){
+    if(isset($_POST["get_seleted_Category"]) || isset($_POST["search"])){
     
         if(isset($_POST["get_seleted_Category"])){
             $id = $_POST["category_id"];
             $sql = "SELECT * from product WHERE category_id = '$id'";
     
-        }else if(isset($_POST["selectbrand"])){
-            $id = $_POST["brand_id"];
-            $sql = "SELECT * from product WHERE brand_id = '$id'";
-        } else {
+        }
+        // else if(isset($_POST["selectbrand"])){
+        //     $id = $_POST["brand_id"];
+        //     $sql = "SELECT * from product WHERE brand_id = '$id'";
+        // }
+        else {
             $keyword = $_POST["keyword"];
             $sql = "SELECT * FROM product WHERE `name` LIKE '%$keyword%'";
         }
@@ -119,20 +108,6 @@
                 $pro_image = $row['picture'];
                 $pro_price = $row['price'];
                 $price = number_format($pro_price, 0);
-            // echo "
-            //         <div class='col-md-3 col-sm-4 col-xs-6'>
-            //             <div class='card'>
-            //                 <img class='card-img-top' src='productpic/$pro_image'>
-            //                 <div class='card-body'>
-            //                     <h6 class='card-title'>
-            //                         $pro_name
-            //                     </h6>
-            //                     <a href='#' class='btn btn-outline-secondary'>$pro_price</a>
-            //                     <a href='cart.php?id=$pro_id&action=add' class='btn btn-primary'>Add to Cart</a>
-            //                 </div>
-            //             </div>
-            //         </div>
-            // ";
             echo "<div class='single-job-items mb-30'>
                 <div class='job-items'>
                     <div class='company-img'>

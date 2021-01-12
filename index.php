@@ -81,7 +81,7 @@
                                 <div class="main-menu">
                                     <nav class="d-none d-lg-block">
                                         <ul id="navigation">
-                                            <li><a href="home-admin.php">Home</a></li>
+                                            <li><a href="index.php">Home</a></li>
                                             <li><a href="cart.php">Keranjang</a></li>
                                             <li><a href="orderlist.php">Pesanan</a></li>
                                             <?php if(isset($_SESSION['username'])){

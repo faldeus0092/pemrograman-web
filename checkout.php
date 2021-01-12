@@ -3,21 +3,6 @@
  require 'connection.php';
  require 'item.php';
  include 'header.php';
-
-// // Save new orders
-// $sql1 = 'INSERT INTO orders (id_user, status) VALUES ("'.$_SESSION['id_user'].'","0")';
-// mysqli_query($koneksi, $sql1);
-// $ordersid = mysqli_insert_id($koneksi); 
-
-// // Save order details for new orders
-// $cart = unserialize(serialize($_SESSION['cart']));
-// for($i=0; $i<count($cart);$i++) {
-//     $sql2 = 'INSERT INTO `order-details` (id_product, id_order, price, qty) VALUES ('.$cart[$i]->id_product.', '.$ordersid.', '.$cart[$i]->price.', '.$cart[$i]->quantity.')';
-//     mysqli_query($koneksi, $sql2);
-// }
-
-// // Clear all product in cart
-// unset($_SESSION['cart']);
  ?>
  <head>
         <title>Checkout Pesanan</title>

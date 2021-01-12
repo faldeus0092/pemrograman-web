@@ -43,11 +43,11 @@ if(isset($_GET['id']) && !isset($_POST['update'])){
     
         if($index == -1) 
                 $_SESSION['cart'][] = $item; // $_SESSION['cart']: set $cart as session variable
-            else {
-                if (($cart[$index]->quantity) < $iteminstock)
+        else {
+            if (($cart[$index]->quantity) < $iteminstock)
                     $cart[$index]->quantity ++;
                     $_SESSION['cart'] = $cart;
-            }
+        }
     }
         
 }
@@ -174,7 +174,7 @@ if(isset($_POST['update'])) {
                                                 $index = 0;
                                                 //tampilkan produk dengan loop
                                                 for($i=0; $i<count($cart); $i++){
-                                                $s += $cart[$i]->price * $cart[$i]->quantity;
+                                                
                                             
                                 ?>
                                 <div class="single-job-items mb-30">
